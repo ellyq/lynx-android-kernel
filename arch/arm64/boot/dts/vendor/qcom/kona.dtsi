@@ -59,9 +59,6 @@
 		swr_ar1 = &swr_ar1;
 		swr_ar2 = &swr_ar2;
 		mhi-netdev0 = &mhi_netdev_0;
-		hsuart0 = &qupv3_se6_4uart;
-		hsuart14 = &qupv3_se17_4uart;
-		hsuart13 = &qupv3_se5_2uart;
 	};
 
 	cpus {
@@ -485,6 +482,12 @@
 			compatible = "removed-dma-pool";
 			no-map;
 			reg = <0x0 0x8be00000 0x0 0x100000>;
+		};
+
+		cdsp_secure_heap: cdsp_secure_heap@8bf00000 {
+			compatible = "removed-dma-pool";
+			no-map;
+			reg = <0x0 0x8bf00000 0x0 0x4600000>;
 		};
 
 		adsp_mem: adsp_region {
@@ -5065,6 +5068,7 @@
 #include "kona-pinctrl.dtsi"
 #include "kona-smp2p.dtsi"
 #include "kona-usb.dtsi"
+#include "kona-coresight.dtsi"
 #include "kona-sde.dtsi"
 #include "kona-sde-pll.dtsi"
 #include "msm-rdbg.dtsi"

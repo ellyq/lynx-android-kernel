@@ -99,18 +99,7 @@
 		label = "gpio-keys";
 
 		pinctrl-names = "default";
-		pinctrl-0 = <&key_home_default
-			     &key_vol_up_default>;
-
-		home {
-			label = "home";
-			gpios = <&pm8150_gpios 1 GPIO_ACTIVE_LOW>;
-			linux,input-type = <1>;
-			linux,code = <KEY_HOME>;
-			gpio-key,wakeup;
-			debounce-interval = <15>;
-			linux,can-disable;
-		};
+		pinctrl-0 = <&key_vol_up_default>;
 
 		vol_up {
 			label = "volume_up";

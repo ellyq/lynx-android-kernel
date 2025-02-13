@@ -288,6 +288,7 @@
 			#size-cells = <1>;
 			qcom,pmic-revid = <&pm8150b_revid>;
 			qcom,pmic-pbs = <&pm8150b_pbs1>;
+			qcom,fg-force-load-profile;
 			status = "disabled";
 
 			qcom,fg-batt-soc@4000 {

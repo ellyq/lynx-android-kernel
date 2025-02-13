@@ -109,7 +109,7 @@
 		pinctrl-0 = <&blu_uart_active>;
 		pinctrl-1 = <&blu_uart_sleep_tx &blu_uart_sleep_rx>;
 		interrupts-extended = <&intc GIC_SPI 606 IRQ_TYPE_LEVEL_HIGH>, <&tlmm 15 0>;
-		status = "ok";
+		status = "disabled";
 		qcom,wakeup-byte = <0xFD>;
 		qcom,wrapper-core = <&qupv3_0>;
 	};
@@ -1002,9 +1002,6 @@
 		clocks = <&clock_gcc GCC_QUPV3_WRAP2_S0_CLK>,
 			<&clock_gcc GCC_QUPV3_WRAP_2_M_AHB_CLK>,
 			<&clock_gcc GCC_QUPV3_WRAP_2_S_AHB_CLK>;
-		pinctrl-names = "default", "sleep";
-		pinctrl-0 = <&qupv3_se14_spi_active>;
-		pinctrl-1 = <&qupv3_se14_spi_sleep>;
 		interrupts = <GIC_SPI 373 IRQ_TYPE_LEVEL_HIGH>;
 		spi-max-frequency = <50000000>;
 		qcom,wrapper-core = <&qupv3_2>;

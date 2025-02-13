@@ -1,0 +1,135 @@
+qcom,lynx-r1-battery {
+	qcom,profile-revision = <24>;
+	qcom,max-voltage-uv = <4200000>;
+	qcom,fg-cc-cv-threshold-mv = <4190>;
+	qcom,nom-batt-capacity-mah = <8600>;
+	qcom,fastchg-current-ma = <3400>;
+	qcom,jeita-fcc-ranges = <50  200  1720000
+				201 450  3400000
+				451 550  1720000>;
+	qcom,jeita-fv-ranges = <50   200  4000000
+				201 450  4200000
+				451 550  4000000>;
+	qcom,jeita-hard-thresholds = <0x529b 0x1815>;
+	qcom,jeita-soft-thresholds = <0x3f29 0x20c1>;
+	qcom,jeita-soft-hys-thresholds = <0x3b5e 0x23f2>;
+	qcom,jeita-soft-fcc-ua = <1720000 1720000>;
+	qcom,jeita-soft-fv-uv = <4000000 4000000>;
+	qcom,batt-id-kohm = <100>;
+	qcom,battery-beta = <4250>;
+	qcom,therm-room-temp = <100000>;
+	qcom,battery-type = "lynx-r1-battery";
+	qcom,therm-coefficients = <0x2318 0xd0c 0xdaf7 0xc556 0x848d>;
+	qcom,therm-center-offset = <0x70>;
+	qcom,therm-pull-up = <100>;
+	qcom,rslow-normal-coeffs = <0x82 0x0c 0xb0 0x14>;
+	qcom,rslow-low-coeffs = <0x97 0x0a 0xa9 0x02>;
+	qcom,checksum = <0x7EE8>;
+	qcom,gui-version = "PM855GUI - 1.0.0.14";
+	qcom,fg-profile-data = [
+		 09 00 38 03
+		 E8 1D C8 1B
+		 E7 1D 00 00
+		 CF DD DE B2
+		 ED 85 81 E2
+		 14 D4 C5 AC
+		 00 00 82 0C
+		 B0 14 31 0D
+		 3F 0A CE 01
+		 32 00 69 F2
+		 7D 07 34 D5
+		 AF 03 88 DA
+		 A3 B4 EE 12
+		 19 E5 0B CA
+		 0B 00 08 00
+		 11 00 25 00
+		 41 00 3C 00
+		 25 00 1F 00
+		 1D 00 36 00
+		 00 00 00 00
+		 00 00 00 00
+		 3F 00 03 00
+		 03 00 13 00
+		 00 64 00 00
+		 07 00 00 00
+		 00 E8 00 00
+		 00 00 00 08
+		 10 00 10 00
+		 00 20 00 40
+		 00 50 53 0F
+		 03 00 D8 00
+		 1A 20 DE 05
+		 BA 02 CE 05
+		 BF 1C 20 0A
+		 C5 0D C7 23
+		 4E 19 CC 42
+		 3D 55 CA 03
+		 97 11 80 1E
+		 2D F7 C8 01
+		 C0 DF C0 1C
+		 5A 02 0F 05
+		 F7 02 6B 19
+		 80 22 C4 3D
+		 C9 52 6A 13
+		 33 1E FD ED
+		 5E C1 13 BD
+		 DF 1C 99 B9
+		 F2 04 04 B3
+		 0F 19 73 82
+		 20 84 1D 8A
+		 79 88 09 80
+		 1B 03 D6 1D
+		 28 03 73 FD
+		 00 00 FC F4
+		 C8 03 FC F7
+		 B6 05 44 D4
+		 3D 20 07 20
+		 B1 0A 6D 02
+		 5E 05 7B 03
+		 CE 01 32 00
+		 F5 01 8D 02
+		 1A 07 ED 03
+		 01 01 CF 05
+		 C7 02 FA 02
+		 78 04 4C 00
+		 3C 00 3E 00
+		 3F 64 41 00
+		 41 F8 40 00
+		 42 00 40 00
+		 46 08 36 18
+		 4D 20 40 00
+		 46 28 43 50
+		 4B 68 5D 09
+		 47 00 3D F8
+		 4A 00 51 F0
+		 42 00 4A 00
+		 42 08 4A 08
+		 43 00 52 28
+		 65 48 54 60
+		 44 0B 50 00
+		 56 F8 47 00
+		 D8 F0 8A 1D
+		 AF 02 D4 0D
+		 BA 09 7B 1C
+		 AA 22 3A 45
+		 34 5A 46 18
+		 F9 02 7D 05
+		 F5 02 33 0F
+		 3F 0A 26 1F
+		 7D 05 5D 02
+		 C3 05 CE 1C
+		 E5 02 4A 04
+		 92 03 8F 18
+		 69 02 9E 04
+		 45 03 6C 00
+		 5A 1F AF 04
+		 11 03 5F 04
+		 E2 1C 22 02
+		 A7 05 33 02
+		 C0 18 71 03
+		 75 04 83 02
+		 7D 00 BE 02
+		 C0 00 FA 00
+		 CE 22 00 00
+	];
+};

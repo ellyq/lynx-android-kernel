@@ -82,7 +82,7 @@
 			function = "normal";
 			input-enable;
 			bias-pull-up;
-			power-source = <0>;
+			power-source = <1>;
 		};
 	};
 
@@ -165,6 +165,8 @@
 	vdd-pdphy-supply = <&pm8150_l2>;
 	vbus-supply = <&smb5_vbus>;
 	vconn-supply = <&smb5_vconn>;
+	hapboost-supply = <&vreg_hap_boost>;
+	ovp-supply = <&vreg_ovp_boost>;
 };
 
 &pm8150b_gpios {
@@ -177,6 +179,16 @@
 			bias-disable;
 			qcom,drive-strength = <3>; /* high */
 			power-source = <1>; /* 1.8 V */
+		};
+
+		ovp_boost_default: ovp_boost_default {
+			pins = "gpio12";
+			function = "normal";
+			output-enable;
+			input-disable;
+			bias-disable;
+			qcom,drive-strength = <3>; /* high */
+			power-source = <0>; /* 1.8 V */
 		};
 	};
 };
@@ -201,6 +213,17 @@
 		startup-delay-us = <1000>;
 		enable-active-high;
 		status = "disabled";
+	};
+
+	vreg_ovp_boost: regulator-ovp {
+		compatible = "regulator-fixed";
+		regulator-name = "ovp_boost";
+		gpio = <&pm8150b_gpios 12 GPIO_ACTIVE_HIGH>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&ovp_boost_default>;
+		startup-delay-us = <1000>;
+		enable-active-high;
+		status = "ok";
 	};
 };
 

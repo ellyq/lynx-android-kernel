@@ -459,6 +459,10 @@
 	status = "ok";
 };
 
+&qupv3_se17_2uart {
+	status = "ok";
+};
+
 &dai_mi2s2 {
 	status = "ok";
 	qcom,msm-mi2s-tx-lines = <1>;
@@ -469,119 +473,6 @@
 			&tert_mi2s_sd0_sleep>;
 };
 
-&kona_snd {
-	qcom,model = "kona-xr-standalone-snd-card";
-	qcom,msm-mi2s-master = <1>, <1>, <1>, <1>, <1>, <1>;
-	qcom,wcn-bt = <1>;
-	qcom,ext-disp-audio-rx = <1>;
-	qcom,audio-routing =
-		"AMIC1", "MIC BIAS1",
-		"MIC BIAS1", "Analog Mic1",
-		"AMIC2", "MIC BIAS2",
-		"MIC BIAS2", "Analog Mic2",
-		"AMIC3", "MIC BIAS3",
-		"MIC BIAS3", "Analog Mic3",
-		"AMIC4", "MIC BIAS3",
-		"MIC BIAS3", "Analog Mic4",
-		"AMIC5", "MIC BIAS4",
-		"MIC BIAS4", "Analog Mic5",
-		"DMIC0", "MIC BIAS1",
-		"MIC BIAS1", "Digital Mic0",
-		"DMIC1", "MIC BIAS1",
-		"MIC BIAS1", "Digital Mic1",
-		"DMIC2", "MIC BIAS1",
-		"MIC BIAS1", "Digital Mic2",
-		"DMIC3", "MIC BIAS1",
-		"MIC BIAS1", "Digital Mic3",
-		"DMIC4", "MIC BIAS4",
-		"MIC BIAS4", "Digital Mic4",
-		"DMIC5", "MIC BIAS4",
-		"MIC BIAS4", "Digital Mic5",
-		"DMIC6", "MIC BIAS3",
-		"MIC BIAS3", "Digital Mic6",
-		"DMIC7", "MIC BIAS3",
-		"MIC BIAS3", "Digital Mic7",
-		"IN1_HPHL", "HPHL_OUT",
-		"IN2_HPHR", "HPHR_OUT",
-		"IN3_AUX", "AUX_OUT",
-		"TX SWR_ADC0", "ADC1_OUTPUT",
-		"TX SWR_ADC1", "ADC2_OUTPUT",
-		"TX SWR_ADC2", "ADC3_OUTPUT",
-		"TX SWR_ADC3", "ADC4_OUTPUT",
-		"TX SWR_DMIC0", "DMIC1_OUTPUT",
-		"TX SWR_DMIC1", "DMIC2_OUTPUT",
-		"TX SWR_DMIC2", "DMIC3_OUTPUT",
-		"TX SWR_DMIC3", "DMIC4_OUTPUT",
-		"TX SWR_DMIC4", "DMIC5_OUTPUT",
-		"TX SWR_DMIC5", "DMIC6_OUTPUT",
-		"TX SWR_DMIC6", "DMIC7_OUTPUT",
-		"TX SWR_DMIC7", "DMIC8_OUTPUT",
-		"WSA SRC0_INP", "SRC0",
-		"WSA_TX DEC0_INP", "TX DEC0 MUX",
-		"WSA_TX DEC1_INP", "TX DEC1 MUX",
-		"RX_TX DEC0_INP", "TX DEC0 MUX",
-		"RX_TX DEC1_INP", "TX DEC1 MUX",
-		"RX_TX DEC2_INP", "TX DEC2 MUX",
-		"RX_TX DEC3_INP", "TX DEC3 MUX",
-		"SpkrLeft IN", "WSA_SPK1 OUT",
-		"SpkrRight IN", "WSA_SPK2 OUT",
-		"VA_AIF1 CAP", "VA_SWR_CLK",
-		"VA_AIF2 CAP", "VA_SWR_CLK",
-		"VA_AIF3 CAP", "VA_SWR_CLK",
-		"VA MIC BIAS3", "Digital Mic0",
-		"VA MIC BIAS3", "Digital Mic1",
-		"VA MIC BIAS1", "Digital Mic2",
-		"VA MIC BIAS1", "Digital Mic3",
-		"VA MIC BIAS4", "Digital Mic4",
-		"VA MIC BIAS4", "Digital Mic5",
-		"VA DMIC0", "VA MIC BIAS3",
-		"VA DMIC1", "VA MIC BIAS3",
-		"VA DMIC2", "VA MIC BIAS1",
-		"VA DMIC3", "VA MIC BIAS1",
-		"VA DMIC4", "VA MIC BIAS4",
-		"VA DMIC5", "VA MIC BIAS4",
-		"VA SWR_ADC0", "VA_SWR_CLK",
-		"VA SWR_ADC1", "VA_SWR_CLK",
-		"VA SWR_ADC2", "VA_SWR_CLK",
-		"VA SWR_ADC3", "VA_SWR_CLK",
-		"VA SWR_MIC0", "VA_SWR_CLK",
-		"VA SWR_MIC1", "VA_SWR_CLK",
-		"VA SWR_MIC2", "VA_SWR_CLK",
-		"VA SWR_MIC3", "VA_SWR_CLK",
-		"VA SWR_MIC4", "VA_SWR_CLK",
-		"VA SWR_MIC5", "VA_SWR_CLK",
-		"VA SWR_MIC6", "VA_SWR_CLK",
-		"VA SWR_MIC7", "VA_SWR_CLK",
-		"VA SWR_ADC0", "ADC1_OUTPUT",
-		"VA SWR_ADC1", "ADC2_OUTPUT",
-		"VA SWR_ADC2", "ADC3_OUTPUT",
-		"VA SWR_ADC3", "ADC4_OUTPUT",
-		"VA SWR_MIC0", "DMIC1_OUTPUT",
-		"VA SWR_MIC1", "DMIC2_OUTPUT",
-		"VA SWR_MIC2", "DMIC3_OUTPUT",
-		"VA SWR_MIC3", "DMIC4_OUTPUT",
-		"VA SWR_MIC4", "DMIC5_OUTPUT",
-		"VA SWR_MIC5", "DMIC6_OUTPUT",
-		"VA SWR_MIC6", "DMIC7_OUTPUT",
-		"VA SWR_MIC7", "DMIC8_OUTPUT";
-	qcom,msm-mbhc-hphl-swh = <1>;
-	qcom,msm-mbhc-gnd-swh = <1>;
-	qcom,cdc-dmic01-gpios = <&cdc_dmic01_gpios>;
-	qcom,cdc-dmic23-gpios = <&cdc_dmic23_gpios>;
-	qcom,cdc-dmic45-gpios = <&cdc_dmic45_gpios>;
-	asoc-codec  = <&stub_codec>, <&bolero>, <&ext_disp_audio_codec>;
-	asoc-codec-names = "msm-stub-codec.1", "bolero_codec",
-				"msm-ext-disp-audio-codec-rx";
-	qcom,wsa-max-devs = <2>;
-	qcom,wsa-devs = <&wsa881x_0211>, <&wsa881x_0212>,
-			<&wsa881x_0213>, <&wsa881x_0214>;
-	qcom,wsa-aux-dev-prefix = "SpkrLeft", "SpkrRight",
-					"SpkrLeft", "SpkrRight";
-	qcom,codec-max-aux-devs = <1>;
-	qcom,codec-aux-devs = <&wcd938x_codec>;
-	qcom,msm_audio_ssr_devs = <&audio_apr>, <&q6core>, <&lpi_tlmm>,
-					<&bolero>;
-};
 
 &ufsphy_mem {
 	compatible = "qcom,ufs-phy-qmp-v4";
@@ -621,8 +512,7 @@
 &vendor {
 	kona_xr_batterydata: qcom,battery-data {
 		qcom,batt-id-range-pct = <15>;
-		#include "fg-gen4-batterydata-mlp466274-3650mah.dtsi"
-		#include "fg-gen4-batterydata-atl466274-3650mah.dtsi"
+		#include "lynx-r1-battery.dtsi"
 	};
 };
 
@@ -632,7 +522,34 @@
 };
 
 &qupv3_se1_i2c {
-	status = "disabled";
+	status = "ok";
+	qcom,clk-freq-out = <1000000>;
+	#address-cells = <1>;
+	#size-cells = <0>;
+	/* LP3907 LDO controller for Fan power*/
+	ti,lp3907@61 {
+		reg=<0x61>;
+		compatible = "ti,lp3907";
+		input-name = "lp3907";
+		enable-gpio = <&tlmm 38 0>;
+		enable-mode = <0>;
+		ldo1-vol-mv = <2200>;
+		ldo2-vol-mv = <2200>;
+	};
+
+	/* LTC1695 Voltage controller for Fan power*/
+	lt,ltc1695@74 {
+		reg=<0x74>;
+		compatible = "lt,ltc1695";
+		input-name = "ltc1695";
+
+		vreg-3v0-supply = <&pm8150_l10>;
+		vreg-3v0-voltage-level = <3000000 3000000>;
+		enable-gpio = <&tlmm 38 0>;
+		enable-mode = <1>;
+		voltage-lvl-default = <0>;
+		boost-start-timer-enable = <0>;
+	};
 };
 
 &pcie1 {
@@ -650,13 +567,24 @@
 
 		pinctrl-names = "default";
 		pinctrl-0 = <&key_home_default
+			&key_confirm_default
 			&key_vol_up_default>;
 
 		home {
 			label = "home";
+			gpios = <&pm8150_gpios 1 GPIO_ACTIVE_LOW>;
+			linux,input-type = <1>;
+			linux,code = <KEY_HOME>;
+			gpio-key,wakeup;
+			debounce-interval = <15>;
+			linux,can-disable;
+		};
+
+		confirm {
+			label = "confirm";
 			gpios = <&pm8150_gpios 7 GPIO_ACTIVE_LOW>;
 			linux,input-type = <1>;
-			linux,code = <KEY_BACK>;
+			linux,code = <KEY_ENTER>;
 			gpio-key,wakeup;
 			debounce-interval = <15>;
 			linux,can-disable;
@@ -684,6 +612,34 @@
 		pinctrl-names = "default", "sleep";
 		pinctrl-0 = <&imu_clkin_default>;
 		pinctrl-1 = <&imu_clkin_sleep>;
+
+	};
+
+	cei,usb1_vbus {
+		compatible = "cei,usb1-vbus-control";
+		usb1_vbus-gpio = <&tlmm 48 0>;
+		usb1_vbus-enable = <0>;
+	};
+
+	cei,fan_power {
+		compatible = "cei,fan-power";
+		fan_power-gpio = <&tlmm 38 0>;
+		fan_power-enable = <0>;
+	};
+
+	cei_hwid {
+		compatible = "ceihwid";
+		input-name = "ceihwid";
+		status = "ok";
+	};
+	
+	cei,ipd {
+		compatible = "cei,ipd";
+		io-channels = <&pm8150l_vadc ADC_GPIO1>,
+					<&pm8150l_vadc ADC_GPIO2>;
+		io-channel-names = "ipd_left",
+						   "ipd_right";
+		biase_voltage-gpio = <&tlmm 64 0>;
 	};
 };
 
@@ -797,7 +753,7 @@
 
 &pm8150b_charger {
 	status = "ok";
-	qcom,sec-charger-config = <0>;
+	qcom,sec-charger-config = <1>;
 	qcom,auto-recharge-soc = <98>;
 	io-channels = <&pm8150b_vadc ADC_MID_CHG_DIV6>,
 		      <&pm8150b_vadc ADC_USB_IN_I>,
@@ -810,11 +766,15 @@
 			   "vph_voltage",
 			   "chg_temp";
 	qcom,battery-data = <&kona_xr_batterydata>;
-	qcom,step-charging-enable;
 	qcom,sw-jeita-enable;
 	qcom,wd-bark-time-secs = <16>;
 	qcom,suspend-input-on-debug-batt;
 	qcom,fcc-stepping-enable;
+
+	qcom,fcc-max-ua = <3400000>;
+	qcom,fv-max-uv = <4200000>;
+	qcom,chg-term-base-current-ma = <200>;
+	qcom,chg-term-current-ma = <250>;
 };
 
 &pm8150b_fg {
@@ -832,6 +792,9 @@
 	qcom,fg-esr-timer-dischg-slow = <0 96>;
 	qcom,fg-esr-cal-soc-thresh = <26 230>;
 	qcom,fg-esr-cal-temp-thresh = <10 40>;
+
+	qcom,fg-cutoff-voltage = <3200>;
+	qcom,fg-sys-term-current = <(-250)>;
 };
 
 &qupv3_se15_i2c {
@@ -855,6 +818,18 @@
 &smb1390_charger {
 	io-channels = <&pm8150b_vadc ADC_AMUX_THM2>;
 	io-channel-names = "cp_die_temp";
+	qcom,parallel-output-mode = <2>;
+	qcom,parallel-input-mode = <3>;
+	qcom,min-ilim-ua = <750000>;
+	status = "ok";
+};
+
+&smb1390_slave {
+	status = "ok";
+};
+
+&smb1390_slave_charger {
+	status = "ok";
 };
 
 &pm8150_vadc {
@@ -931,6 +906,18 @@
 		qcom,hw-settle-time = <200>;
 		qcom,pre-scaling = <1 1>;
 	};
+
+	adc_gpio1@12 {
+		reg = <ADC_GPIO1>;
+		label = "adc_gpio1";
+		qcom,pre-scaling = <1 1>;
+	};
+
+	adc_gpio2@13 {
+		reg = <ADC_GPIO2>;
+		label = "adc_gpio2";
+		qcom,pre-scaling = <1 1>;
+	};
 };
 
 &pm8150b_adc_tm {
@@ -1001,6 +988,20 @@
 };
 
 &dsi_dual_xrsmrtvwr_jdi_video {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lab_ibb>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
+	qcom,mdss-dsi-bl-min-level = <1>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <255>;
+	qcom,platform-reset-gpio = <&tlmm 75 0>;
+	qcom,platform-te-gpio = <&tlmm 66 0>;
+
+	qcom,platform-bklight-en-gpio = <&tlmm 133 0>;
+	qcom,5v-boost-gpio = <&tlmm 134 0>;
+	/delete-property/ qcom,platform-en-gpio;
+};
+
+&dsi_dual_xrsmrtvwr_boe_video {
 	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_lab_ibb>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_external";
 	qcom,mdss-dsi-bl-min-level = <1>;
@@ -1172,7 +1173,7 @@
 	qcom,vdd-voltage-level = <2950000 2960000>;
 	qcom,vdd-current-level = <200 800000>;
 
-	vdd-io-supply = <&pm8150_s4>;
+	vdd-io-supply = <&pm8150a_l6>;
 	qcom,vdd-io-voltage-level = <1808000 2960000>;
 	qcom,vdd-io-current-level = <200 22000>;
 
@@ -1196,32 +1197,32 @@
 
 &pm8150l_flash0 {
 	qcom,hw-strobe-option = <0>;
-	qcom,strobe-sel = <1>;
+	qcom,strobe-sel = <0>;
 };
 
 &pm8150l_flash1 {
 	qcom,hw-strobe-option = <0>;
-	qcom,strobe-sel = <1>;
+	qcom,strobe-sel = <0>;
 };
 
 &pm8150l_flash2 {
 	qcom,hw-strobe-option = <0>;
-	qcom,strobe-sel = <1>;
+	qcom,strobe-sel = <0>;
 };
 
 &pm8150l_torch0 {
 	qcom,hw-strobe-option = <0>;
-	qcom,strobe-sel = <1>;
+	qcom,strobe-sel = <0>;
 };
 
 &pm8150l_torch1 {
 	qcom,hw-strobe-option = <0>;
-	qcom,strobe-sel = <1>;
+	qcom,strobe-sel = <0>;
 };
 
 &pm8150l_torch2 {
 	qcom,hw-strobe-option = <0>;
-	qcom,strobe-sel = <1>;
+	qcom,strobe-sel = <0>;
 };
 
 &wil6210 {
@@ -1229,5 +1230,5 @@
 };
 
 &key_home_default {
-	pins = "gpio7";
+	pins = "gpio1";
 };
